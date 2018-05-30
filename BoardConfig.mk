@@ -77,8 +77,10 @@ BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
 
 # Shims
 LINKER_FORCED_SHIM_LIBS := \
+    /system/vendor/bin/thermal|libshim_ifc.so \
     /system/vendor/lib/libgui_ext.so|libshim_gui.so \
-    /system/vendor/lib/libui_ext.so|libshim_ui.so
+    /system/vendor/lib/libui_ext.so|libshim_ui.so \
+    /system/vendor/lib/mtk-ril.so|libshim_ifc.so
 
 # Vendor
 TARGET_COPY_OUT_VENDOR := system/vendor
