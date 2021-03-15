@@ -121,6 +121,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libshim_gui \
     libshim_ui
 
 # USB
