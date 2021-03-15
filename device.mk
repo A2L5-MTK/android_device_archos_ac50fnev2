@@ -119,6 +119,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_ui
+
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory

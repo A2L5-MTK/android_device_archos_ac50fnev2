@@ -66,5 +66,9 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6580
 
+# Shims
+LINKER_FORCED_SHIM_LIBS := \
+    /system/vendor/lib/libui_ext.so|libshim_ui.so
+
 # Vendor
 4TARGET_COPY_OUT_VENDOR := system/vendor
