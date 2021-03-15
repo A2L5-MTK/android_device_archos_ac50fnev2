@@ -138,6 +138,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    libwifi-hal-mt66xx \
     libwpa_client \
     hostapd \
     wpa_supplicant
