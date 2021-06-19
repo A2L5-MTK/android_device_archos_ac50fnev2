@@ -72,20 +72,10 @@ on property:persist.mediatek.fg.log.enable=1
     write /proc/sys/kernel/printk 8
 
 on charger
-    mount ext4 /dev/block/platform/mtk-msdc.0/11120000.msdc0/by-name/system /system ro wait
-    #mount ubifs ...
-    mount ubifs ubi@system /system ro wait
-    chmod 0660 /dev/spm
-    chown system system /dev/spm
-    start spm_script
-		chmod 0666 /dev/kmsg
-		write /sys/devices/platform/battery_meter/FG_daemon_log_level 7
-    start fuelgauged
-    start kpoc_charger
-    start servicemanager
-
-    # disable USB
-    write /sys/devices/platform/mt_usb/cmode 0
+    mount_all /fstab.mt6580
+    chmod 0666 /dev/kmsg
+    write /sys/devices/platform/battery_meter/FG_daemon_log_level 7
+    class_start charger
 
 on fs
     write /proc/bootprof "INIT:Mount_START"
@@ -1470,11 +1460,6 @@ service thermald /vendor/bin/thermald
     user system
     group system
 
-service fuelgauged /vendor/bin/fuelgauged
-    class main
-    user system
-    group system
-
 service sn /vendor/bin/sn
     class late_start
     user system
@@ -1522,8 +1507,10 @@ on property:persist.service.operamax=1
 on property:persist.service.operamax=0
     stop OperaMaxSystem
 
-service kpoc_charger /vendor/bin/kpoc_charger
+service charger /sbin/healthd -c
     class charger
+    critical
+    seclabel u:r:healthd:s0
 
 # Program binary service
 service program_binary /vendor/bin/program_binary_service
