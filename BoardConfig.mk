@@ -60,8 +60,11 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12446072832 # mmcblk0p20 (12154368*1024)
 # Platform
 TARGET_BOARD_PLATFORM := mt6580
 
+# Props
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6580
 
 # Vendor
-TARGET_COPY_OUT_VENDOR := system/vendor
+4TARGET_COPY_OUT_VENDOR := system/vendor
