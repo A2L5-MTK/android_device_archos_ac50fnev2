@@ -17,6 +17,9 @@
 ## Device Path
 DEVICE_PATH := device/archos/ac50fnev2
 
+## Vendor Blobs
+$(call inherit-product, vendor/archos/ac50fnev2/ac50fnev2-vendor.mk)
+
 # Display
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
