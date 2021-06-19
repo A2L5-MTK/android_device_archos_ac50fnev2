@@ -17,6 +17,9 @@
 ## Device Path
 DEVICE_PATH := device/archos/ac50fnev2
 
+## Inherit Dalvik Heap
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
 ## Vendor Blobs
 $(call inherit-product, vendor/archos/ac50fnev2/ac50fnev2-vendor.mk)
 
