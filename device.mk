@@ -20,3 +20,16 @@ DEVICE_PATH := device/archos/ac50fnev2
 # Display
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
+
+# Rootdir
+PRODUCT_PACKAGES += \
+    enableswap.sh \
+    fstab.mt6580 \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6580.rc \
+    init.mt6580.usb.rc \
+    init.nvdata.rc \
+    init.project.rc \
+    init.rilproxy.rc \
+    ueventd.mt6580.rc
