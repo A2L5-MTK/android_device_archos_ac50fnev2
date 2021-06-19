@@ -24,6 +24,12 @@ $(call inherit-product, vendor/archos/ac50fnev2/ac50fnev2-vendor.mk)
 PRODUCT_AAPT_CONFIG := mdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
+# ADB
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0 \
+    persist.sys.usb.config=adb
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.r_submix.default \
