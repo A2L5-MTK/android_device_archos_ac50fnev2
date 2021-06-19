@@ -20,6 +20,10 @@ DEVICE_PATH := device/archos/ac50fnev2
 ## Vendor Blobs
 $(call inherit-product, vendor/archos/ac50fnev2/ac50fnev2-vendor.mk)
 
+# AAPT
+PRODUCT_AAPT_CONFIG := mdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := mdpi
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.r_submix.default \
