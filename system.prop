@@ -36,6 +36,8 @@ ro.mtk_enable_md1=1
 ro.mtk_protocol1_rat_config=W/G
 ro.num_md_protocol=2ro.num_md_protocol=2
 ro.telephony.default_network=0,0
+ro.telephony.ril_class=MediaTekRIL
+ro.telephony.ril.config=fakeiccid
 ro.telephony.sim.count=2
 persist.radio.default.sim=0
 persist.radio.fd.counter=300

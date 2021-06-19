@@ -72,6 +72,9 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6580
 
+# RIL
+BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
+
 # Shims
 LINKER_FORCED_SHIM_LIBS := \
     /system/vendor/lib/libgui_ext.so|libshim_gui.so \
