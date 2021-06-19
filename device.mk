@@ -42,6 +42,10 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
 
+# Fake Headers
+$(shell mkdir -p out/target/product/ac50fnev2/obj/KERNEL_OBJ)
+$(shell cp -r ${DEVICE_PATH}/fake-headers out/target/product/ac50fnev2/obj/KERNEL_OBJ/usr)
+
 # FMRadio
 PRODUCT_PACKAGES += \
     libfmjni \
