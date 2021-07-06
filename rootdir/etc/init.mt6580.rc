@@ -36,6 +36,15 @@ on init
 
     mkdir /protect_f 0771 system system
     mkdir /protect_s 0771 system system
+
+    # Force properties for mtkmal
+    setprop persist.mtk_ims_support 0
+    setprop persist.mtk_epdg_support 0
+
+on property:vold.decrypt=trigger_restart_framework
+    setprop persist.mtk_ims_support 0
+    setprop persist.mtk_epdg_support 0
+
     #create mountpoint for persist partition
     mkdir /persist 0771 system system
     insmod /lib/modules/ubi.ko
