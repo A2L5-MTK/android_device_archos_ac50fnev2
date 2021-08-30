@@ -113,6 +113,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     power.mt6580
 
+# RIL
+PRODUCT_PACKAGES += \
+    librilutils
+
 # Rootdir
 PRODUCT_PACKAGES += \
     enableswap.sh \
