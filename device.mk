@@ -136,6 +136,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libshim_gps \
     libshim_gui \
     libshim_ifc \
     libshim_ui
