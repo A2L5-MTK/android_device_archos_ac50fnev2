@@ -95,6 +95,8 @@ vendor/firmware/pcm_sodi.bin
 vendor/firmware/pcm_suspend.bin
 
 # FM-Radio
+# Src built libfmjni with a patch, see commit message
+lib/libfmjni.so|14114cdb5ba6d1074a6671e67e12fbd7e5760dd6
 vendor/lib/hw/radio.fm.mt6580.so
 vendor/lib/libfmcust.so
 
